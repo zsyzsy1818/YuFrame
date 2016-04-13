@@ -1,4 +1,4 @@
-package com.yu.yuframe.testmain;
+package com.yu.yuframe.test;
 
 import android.os.Bundle;
 import android.util.Log;

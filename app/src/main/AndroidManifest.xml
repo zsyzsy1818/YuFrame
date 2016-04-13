@@ -73,19 +73,25 @@
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <!--测试类   用于测试分享功能-->
-        <activity android:name=".testmain.ShareSDK_Test">
+        <activity android:name=".test.ShareSDK_Test">
 
         </activity>
         <!--结束shareSDK的activity-->
         <!--测试类     Retrofit   用于网络请求-->
-        <activity android:name=".testmain.Retrofit_Test">
+        <activity android:name=".test.Retrofit_Test">
+
+        </activity>
+        <!--结束     Retrofit   用于网络请求-->
+
+        <!--测试类 TabFragment  仿QQ底部菜单-->
+        <activity android:name=".test.TabFragmentQQ">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束     Retrofit   用于网络请求-->
+        <!--结束 TabFragment  仿QQ底部菜单-->
     </application>
 
 </manifest>
