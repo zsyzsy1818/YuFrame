@@ -85,13 +85,16 @@
 
         <!--测试类 TabFragment  仿QQ底部菜单-->
         <activity android:name=".test.TabFragmentQQ">
+
+        </activity>
+        <!--结束 TabFragment  仿QQ底部菜单-->
+        <activity android:name=".test.ExpandableListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束 TabFragment  仿QQ底部菜单-->
     </application>
 
 </manifest>
