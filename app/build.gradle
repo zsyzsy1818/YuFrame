@@ -4,6 +4,11 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+
+    //JPush的动态库
+    sourceSets.main{
+        jniLibs.srcDirs=['libs']
+    }
     defaultConfig {
         applicationId "com.yu.yuframe"
         minSdkVersion 14

@@ -2,6 +2,7 @@ package com.yu.yuframe;
 
 import android.app.Application;
 
+import cn.jpush.android.api.JPushInterface;
 import cn.sharesdk.framework.ShareSDK;
 
 /**
@@ -16,6 +17,10 @@ public class GlobalApplication extends Application {
         app = this;
         //初始化shareSdk
         ShareSDK.initSDK(this);
+
+        //初始化JPush
+        JPushInterface.setDebugMode(true);//开启debug模式
+        JPushInterface.init(this);
     }
 
     public static GlobalApplication getApp() {
