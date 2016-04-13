@@ -11,8 +11,12 @@ import com.yu.yuframe.ui.BaseActivity;
 import cn.jpush.android.api.JPushInterface;
 
 /**
+ * JPush极光推送,
+ * ***必须在app  build.gradle中加入动态库
  * Created by Yu on 2016/4/13.
  */
+
+
 public class JPushActivity_Test extends BaseActivity implements View
         .OnClickListener {
 
