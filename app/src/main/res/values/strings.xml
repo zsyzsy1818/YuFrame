@@ -2,4 +2,6 @@
     <string name="app_name">YuFrame</string>
     <string name="hello">Hello World, BarCodeTestActivity!</string>
     <string name="submit">提交</string>
+    <string name="Camera_SD">系统相机拍照--指定路径到SD卡</string>
+    <string name="Camera_Publish">系统相机拍照--默认图库</string>
 </resources>

@@ -269,12 +269,50 @@
             android:name=".test.VideoViewActivityTest"
             android:screenOrientation="sensorLandscape"
             >
+
+        </activity>
+        <!--结束      VideoView实例   用于播放本地视频-->
+
+
+        <!--Camera 调用系统摄像头-->
+        <!--拍照-->
+        <activity
+            android:name=".test.Camera_SystemTestActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:taskAffinity="android.task.camera"
+            >
+
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE"/>
+                <categroy android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
+                <categroy android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 摄像-->
+        <activity
+            android:name=".test.VideoCamera_SystemTestActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:taskAffinity="android.task.camcorder"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAMERA"/>
+                <categroy android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.VIDEO_CAPTURE"/>
+                <categroy android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
-        <!--结束      VideoView实例   用于播放本地视频-->
+        <!--结束      Camera 调用系统摄像头-->
 
     </application>
 
