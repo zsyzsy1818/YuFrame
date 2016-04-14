@@ -254,13 +254,27 @@
 
         <!--RecyclerView实例-->
         <activity android:name=".test.RecyclerViewActivity_Test">
+
+        </activity>
+        <!--RecyclerView实例-->
+
+        <!--VideoView实例   用于播放本地视频
+
+        android:screenOrientation="landscape"   横屏用的
+            android:screenOrientation="sensorLandscape"横屏用的(重力影响方向)
+
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"  设置去除titlebar
+        -->
+        <activity
+            android:name=".test.VideoViewActivityTest"
+            android:screenOrientation="sensorLandscape"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--RecyclerView实例-->
-
+        <!--结束      VideoView实例   用于播放本地视频-->
 
     </application>
 

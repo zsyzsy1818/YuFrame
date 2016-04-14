@@ -14,7 +14,10 @@ import com.yu.yuframe.ui.BaseActivity;
 import java.util.ArrayList;
 
 /**
+ *      瀑布流
+ *
  * Created by Yu on 2016/4/13.
+ *
  */
 public class RecyclerViewActivity_Test extends BaseActivity {
     private RecyclerView recyclerView;
@@ -39,6 +42,7 @@ public class RecyclerViewActivity_Test extends BaseActivity {
                 RecyclerAdapter.ItemClickListener() {
             @Override
             public void onItemClick(int position, View view) {
+                //删除数据
 //                adapter.deleteByIndex(position);
             }
 
