@@ -111,9 +111,9 @@ public class VideoCamera_SystemTestActivity extends BaseActivity implements
                     testvideocamerasystemtestactivitylayoutId
                             .setBackgroundColor(Color.BLACK);
                     testvideocamerasystemtestactivitybuttonId.setVisibility
-                            (View.GONE);
+                            (View.INVISIBLE);
                     testvideocamerasystemtestactivitybuttonplayId
-                            .setVisibility(View.GONE);
+                            .setVisibility(View.INVISIBLE);
                     Log.d(TAG, "uri:" + uri);
 
                     testvideocamerasystemtestactivityvideoviewId.setVideoURI
