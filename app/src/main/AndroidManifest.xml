@@ -256,7 +256,7 @@
         <activity android:name=".test.RecyclerViewActivity_Test">
 
         </activity>
-        <!--RecyclerView实例-->
+        <!--结束      RecyclerView实例-->
 
         <!--VideoView实例   用于播放本地视频
 
