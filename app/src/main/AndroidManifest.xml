@@ -299,10 +299,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:taskAffinity="android.task.camcorder"
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
             <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAMERA"/>
                 <categroy android:name="android.intent.category.DEFAULT"/>
@@ -314,6 +311,18 @@
         </activity>
         <!--结束      Camera 调用系统摄像头-->
 
+        <!--MaterialDesign android5.0以上风格的修改日期,时间以及dialog等控件的jar包
+          compile 'com.github.rey5137:material:1.2.2'
+          -->
+        <activity android:name=".test.MaterialDesignRey5173_Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--结束      MaterialDesign android5.0以上风格的修改日期,时间以及dialog等控件的jar包
+          compile 'com.github.rey5137:material:1.2.2'
+          -->
     </application>
 
 </manifest>
