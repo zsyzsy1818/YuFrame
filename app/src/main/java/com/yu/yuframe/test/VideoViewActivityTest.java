@@ -29,6 +29,9 @@ public class VideoViewActivityTest extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         //隐藏状态栏
         getSupportActionBar().hide();
 
