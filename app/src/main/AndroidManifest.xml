@@ -323,12 +323,18 @@
 
         <!--判断设备唯一性工具测试类-->
         <activity android:name=".test.DeviceUuidFactoryTestActivity">
+
+        </activity>
+        <!--结束判断设备唯一性工具测试类-->
+
+        <!--GreenDaoDB数据库工具测试类-->
+        <activity android:name=".test.GreenDaoActivityTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束判断设备唯一性工具测试类-->
+        <!--结束      GreenDaoDB数据库工具测试类-->
     </application>
 
 </manifest>
