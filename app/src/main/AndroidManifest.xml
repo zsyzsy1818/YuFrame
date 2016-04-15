@@ -315,14 +315,20 @@
           compile 'com.github.rey5137:material:1.2.2'
           -->
         <activity android:name=".test.MaterialDesignRey5173_Test">
+
+        </activity>
+        <!--结束       MaterialDesign android5.0以上风格的修改日期,时间以及dialog等控件的jar包
+          compile 'com.github.rey5137:material:1.2.2'
+          -->
+
+        <!--判断设备唯一性工具测试类-->
+        <activity android:name=".test.DeviceUuidFactoryTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束       MaterialDesign android5.0以上风格的修改日期,时间以及dialog等控件的jar包
-          compile 'com.github.rey5137:material:1.2.2'
-          -->
+        <!--结束判断设备唯一性工具测试类-->
     </application>
 
 </manifest>

@@ -17,10 +17,12 @@ import android.widget.VideoView;
 
 import com.yu.yuframe.R;
 import com.yu.yuframe.ui.BaseActivity;
+import com.yu.yuframe.util.test.DeviceUuidFactory;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * 系统相机录像
@@ -69,6 +71,7 @@ public class VideoCamera_SystemTestActivity extends BaseActivity implements
 
         testvideocamerasystemtestactivitybuttonId.setOnClickListener(this);
         testvideocamerasystemtestactivitybuttonplayId.setOnClickListener(this);
+
     }
 
     @Override
