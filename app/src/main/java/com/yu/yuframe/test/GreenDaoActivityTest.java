@@ -46,6 +46,7 @@ public class GreenDaoActivityTest extends BaseActivity implements View.OnClickLi
     private android.widget.Button testgreendaoactivitytestbuttonSearch;
     private android.widget.ListView testgreendaoactivitytestlist;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -178,6 +179,10 @@ public class GreenDaoActivityTest extends BaseActivity implements View.OnClickLi
                 .where(NoteDao.Properties.Text.eq(testgreendaoactivitytesteditTextNote.getText()))
                 .orderAsc(NoteDao.Properties.Date)
                 .build();
+
+
+
+        cursor.requery();
 
         Toast.makeText(this, "共查到" + query.list().size() + "条", Toast.LENGTH_SHORT).show();
 //      查询结果以 List 返回

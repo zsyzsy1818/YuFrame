@@ -20,11 +20,8 @@ public class GlobalApplication extends Application {
     private static DaoMaster daoMaster;
     private static DaoSession daoSession;
 
-    public static SQLiteDatabase getDb() {
-        return db;
-    }
-
     private static SQLiteDatabase db;
+
 
     /**
      * 创建App初始化方法
@@ -48,16 +45,18 @@ public class GlobalApplication extends Application {
         return app;
     }
 
+    public static SQLiteDatabase getDb() {
+        return db;
+    }
+
     /**
      * 取得DaoMaster
      *
      * @param context
      * @return
      */
-    public static DaoMaster getDaoMaster(Context context)
-    {
-        if (daoMaster == null)
-        {
+    public static DaoMaster getDaoMaster(Context context) {
+        if (daoMaster == null) {
             // 通过 DaoMaster 的内部类 DevOpenHelper，你可以得到一个便利的 SQLiteOpenHelper 对象。
             // 可能你已经注意到了，你并不需要去编写「CREATE TABLE」这样的 SQL 语句，因为 greenDAO 已经帮你做了。
             // TODO 注意：默认的 DaoMaster.DevOpenHelper 会在数据库升级时，删除所有的表，意味着这将导致数据的丢失。
@@ -70,18 +69,16 @@ public class GlobalApplication extends Application {
         }
         return daoMaster;
     }
+
     /**
      * 取得DaoSession
      *
      * @param context
      * @return
      */
-    public static DaoSession getDaoSession(Context context)
-    {
-        if (daoSession == null)
-        {
-            if (daoMaster == null)
-            {
+    public static DaoSession getDaoSession(Context context) {
+        if (daoSession == null) {
+            if (daoMaster == null) {
                 daoMaster = getDaoMaster(context);
             }
             daoSession = daoMaster.newSession();

@@ -3,6 +3,7 @@ package com.yu.yuframe.test;
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.MediaController;
@@ -53,7 +54,7 @@ public class VideoViewActivityTest extends BaseActivity {
         //2.设置数据源
         Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
                 getPackageName() + "/" + R.raw.test);
-
+        Log.d("VideoViewActivityTest", "uri:" + uri);
         videoView.setVideoURI(uri);
         //3.实例化控制条
         MediaController mediaController = new MediaController(this);
