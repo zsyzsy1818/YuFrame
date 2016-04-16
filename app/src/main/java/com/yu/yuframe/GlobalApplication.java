@@ -3,7 +3,12 @@ package com.yu.yuframe;
 import android.app.Application;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.util.LruCache;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.Volley;
 import com.yu.greendao.DaoMaster;
 import com.yu.greendao.DaoSession;
 import com.yu.yuframe.config.MyConfig;
@@ -22,6 +27,9 @@ public class GlobalApplication extends Application {
 
     private static SQLiteDatabase db;
 
+    //Volley框架初始化:
+    private RequestQueue queue;
+    private ImageLoader imageLoader;
 
     /**
      * 创建App初始化方法
@@ -39,6 +47,10 @@ public class GlobalApplication extends Application {
 
 
         getDaoSession(this);
+
+
+        //初始化Volley
+        initVolley();
     }
 
     public static GlobalApplication getApp() {
@@ -84,5 +96,47 @@ public class GlobalApplication extends Application {
             daoSession = daoMaster.newSession();
         }
         return daoSession;
+    }
+
+    private void initVolley() {
+        //实例化请求队列
+        queue = Volley.newRequestQueue(this);
+        //实例化ImageLoader
+        imageLoader = new ImageLoader(queue, new ImageLoader.ImageCache() {
+
+            private LruCache<String,Bitmap> lruCache = new LruCache<String,Bitmap>(10<<20){
+                @Override
+                protected int sizeOf(String key, Bitmap value) {
+                    return value.getRowBytes()*value.getHeight();
+                }
+            };
+
+            /**
+             * 取图片
+             * @param url
+             * @return
+             */
+            @Override
+            public Bitmap getBitmap(String url) {
+                return lruCache.get(url);
+            }
+
+            /**
+             * 存图片
+             * @param url
+             * @param bitmap
+             */
+            @Override
+            public void putBitmap(String url, Bitmap bitmap) {
+                lruCache.put(url,bitmap);
+            }
+        });
+    }
+    public RequestQueue getQueue() {
+        return queue;
+    }
+
+    public ImageLoader getImageLoader() {
+        return imageLoader;
     }
 }

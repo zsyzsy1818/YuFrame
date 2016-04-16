@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/listvideo_activity_item_qsvideo_thumbId"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/listvideo_activity_item_qsvideo_loginNameId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/listvideo_activity_item_qsvideo_thumbId"
+        android:gravity="center_vertical"
+        android:text="我是标题"
+        android:textColor="#00f"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/listvideo_activity_item_qsvideo_contentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listvideo_activity_item_qsvideo_thumbId"
+        android:layout_marginTop="10dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/listvideo_activity_item_qsvideo_contentId">
+
+        <SurfaceView
+            android:id="@+id/listvideo_activity_item_qsvideo_surfaceViewId"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/listvideo_activity_item_qsvideo_picId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/ic_launcher"
+            />
+    </FrameLayout>
+</RelativeLayout>

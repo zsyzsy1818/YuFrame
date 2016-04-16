@@ -329,10 +329,7 @@
 
         <!--GreenDaoDB数据库工具测试类-->
         <activity android:name=".test.GreenDaoActivityTest">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+          
         </activity>
         <!--结束      GreenDaoDB数据库工具测试类-->
 
@@ -355,6 +352,12 @@
         <!--android:windowSoftInputMode="stateAlwaysHidden"/>-->
         <!--&lt;!&ndash;结束      VitamioVideoView视频播放&ndash;&gt;-->
         <!---->
+        <activity android:name=".test.ListVideoActivity_Test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
