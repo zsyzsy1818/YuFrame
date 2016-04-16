@@ -354,6 +354,7 @@
         <!--android:theme="@android:style/Theme.NoTitleBar"-->
         <!--android:windowSoftInputMode="stateAlwaysHidden"/>-->
         <!--&lt;!&ndash;结束      VitamioVideoView视频播放&ndash;&gt;-->
+        <!---->
     </application>
 
 </manifest>
