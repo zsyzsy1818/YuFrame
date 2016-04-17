@@ -351,12 +351,32 @@
         <!--android:theme="@android:style/Theme.NoTitleBar"-->
         <!--android:windowSoftInputMode="stateAlwaysHidden"/>-->
         <!--&lt;!&ndash;结束      VitamioVideoView视频播放&ndash;&gt;-->
+
+        <!--ListView在线加载视频-->
         <activity android:name=".test.ListVideoActivity_Test">
+
+        </activity>
+        <!--结束      ListView在线加载视频-->
+
+
+        <!--通用MyAdapter加载ListView用的,可兼容图片和文字,复用性及功能极强
+                MyAdapter,\bean\test\App.java,\bean\test\Book.java,\test\MyAdapter_ListView_Test.java,
+                \layout\test_myadapter_listview_item_one.xml,
+                \layout\test_myadapter_listview_item_two.xml,
+                \layout\test_myadapter_main.xml
+                \mipmap-hdpi\test_myadapter_listview_iv_icon_baidu.png
+                \mipmap-hdpi\test_myadapter_listview_iv_icon_douban.png
+                \mipmap-hdpi\test_myadapter_listview_iv_icon_zhifubao.png
+
+        -->
+
+        <activity android:name=".test.MyAdapter_ListView_Test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!--结束      通用MyAdapter加载ListView用的,可兼容图片和文字,复用性及功能极强-->
     </application>
 
 </manifest>
