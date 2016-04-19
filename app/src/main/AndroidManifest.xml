@@ -372,12 +372,17 @@
         -->
 
         <activity android:name=".test.MyAdapter_ListView_Test">
+
+        </activity>
+        <!--结束      通用MyAdapter加载ListView用的,可兼容图片和文字,复用性及功能极强-->
+
+        <!--SwipeRefreshLayout  V4包自带的下拉刷新-->
+        <activity android:name=".test.SwipeRefreshLayoutActivity_Test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束      通用MyAdapter加载ListView用的,可兼容图片和文字,复用性及功能极强-->
     </application>
 
 </manifest>

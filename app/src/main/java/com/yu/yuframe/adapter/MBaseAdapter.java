@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import java.util.List;
 
 /**
- * 普通的BaseAdapter      TODO ListVideo用
+ * 普通的BaseAdapter      TODO ListVideo用 ,  SwipeRefreshLayout也用的这个
  * Created by Administrator on 2016/3/29 0029.
  */
 public abstract class MBaseAdapter<T> extends BaseAdapter {
