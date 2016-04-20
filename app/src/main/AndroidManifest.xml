@@ -46,6 +46,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!--结束  JPush权限-->
+
+    <!--Vitamio需要的权限-->
+  <!--  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+    <!--结束      Vitamio需要的权限-->
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
@@ -370,19 +379,43 @@
                 \mipmap-hdpi\test_myadapter_listview_iv_icon_zhifubao.png
 
         -->
-
         <activity android:name=".test.MyAdapter_ListView_Test">
+
+
 
         </activity>
         <!--结束      通用MyAdapter加载ListView用的,可兼容图片和文字,复用性及功能极强-->
 
         <!--SwipeRefreshLayout  V4包自带的下拉刷新-->
         <activity android:name=".test.SwipeRefreshLayoutActivity_Test">
+
+        </activity>
+        <!--Vitamio 的初始化Activity-->
+        <!-- Don't forgot InitActivity -->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!--结束      Vitamio 的初始化Activity-->
+        <!--Vitamio的Activity这个是自定义的-->
+        <activity
+            android:name=".test.VitamioVideoView_Test"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:label="Vitamio/VideoView" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+
+        <!--结束      Vitamio的Activity这个是自定义的-->
+
+
+
+
     </application>
 
 </manifest>

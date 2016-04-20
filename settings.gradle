@@ -1,1 +1,1 @@
-include ':app', ':pulltorefresh', ':greendaogenerator', ':JChat'
+include ':app', ':pulltorefresh', ':greendaogenerator', ':JChat', ':vitamio'
