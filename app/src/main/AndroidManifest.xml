@@ -344,24 +344,6 @@
         <!--结束      GreenDaoDB数据库工具测试类-->
 
 
-        <!--vitamio有点问题删除了,有时间写吧-->
-        <!--&lt;!&ndash;VitamioVideoView视频播放&ndash;&gt;-->
-        <!--<activity android:name=".test.VitamioVideoViewActivityTest">-->
-        <!--<intent-filter>-->
-        <!--<action android:name="android.intent.action.MAIN"/>-->
-        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-        <!--</intent-filter>-->
-        <!--</activity>-->
-
-
-        <!--&lt;!&ndash;android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden"&ndash;&gt;-->
-        <!--<activity-->
-        <!--android:name="io.vov.vitamio.activity.InitActivity"-->
-        <!--android:launchMode="singleTop"-->
-        <!--android:theme="@android:style/Theme.NoTitleBar"-->
-        <!--android:windowSoftInputMode="stateAlwaysHidden"/>-->
-        <!--&lt;!&ndash;结束      VitamioVideoView视频播放&ndash;&gt;-->
-
         <!--ListView在线加载视频-->
         <activity android:name=".test.ListVideoActivity_Test">
 
@@ -421,13 +403,19 @@
         <!--Picasso   谷歌官方图片缓存加载框架-->
 
         <activity android:name=".test.Picasso_Test">
+
+        </activity>
+
+        <!--结束      Picasso   谷歌官方图片缓存加载框架-->
+
+        <!--Fresco FaceBook图片加载框架,渐进式加载(适用于网络复杂的情况)-->
+        <activity android:name=".test.Fresco_Test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <!--结束      Picasso   谷歌官方图片缓存加载框架-->
+        <!--结束    Fresco FaceBook图片加载框架,渐进式加载(适用于网络复杂的情况)-->
     </application>
 
 </manifest>
