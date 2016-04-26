@@ -55,6 +55,27 @@
       <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
       <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
     <!--结束      Vitamio需要的权限-->
+
+
+    <!--高德地图 权限-->
+    <!-- 地图包、搜索包需要的基础权限 -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- //定位包、导航包需要的额外权限（注：基础权限也需要） -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!--结束      高德地图 权限-->
+
+
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
@@ -410,12 +431,24 @@
 
         <!--Fresco FaceBook图片加载框架,渐进式加载(适用于网络复杂的情况)-->
         <activity android:name=".test.Fresco_Test">
+
+        </activity>
+        <!--结束    Fresco FaceBook图片加载框架,渐进式加载(适用于网络复杂的情况)-->
+
+        <!--高德导航key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="68fcc0471f75d4e8fdca1785da0dcca6"/>
+        <!--结束      高德导航key-->
+        <!--高德2D基础地图Activity-->
+        <activity android:name=".test.BaseMap2DActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <!--结束    Fresco FaceBook图片加载框架,渐进式加载(适用于网络复杂的情况)-->
+        <!--结束      高德2D基础地图Activity-->
     </application>
 
 </manifest>
